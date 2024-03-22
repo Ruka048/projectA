@@ -1,0 +1,117 @@
+.realEstate-container {
+  background-color: rgba(242, 242, 242, 0.7);
+}
+.card-img {
+  max-width: 100%;
+  height: 40vh;
+}
+.card-img-container {
+  object-fit: cover;
+}
+.card {
+  width: 360px;
+  /* border: solid rgba(0,0,0,0.5); */
+  border-radius: 0 0 15px 15px;
+  margin: 0 10px 0 10px;
+  background-color: white;
+  position: relative;
+}
+.card-container {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 10px;
+}
+.card-content {
+  padding: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+.list-title {
+  padding: 20px;
+  color: black;
+  text-shadow: none;
+}
+.card-title {
+  font-size: 18px;
+  font-family: "Poppin", sans-serif;
+  font-weight: bold;
+  display: -webkit-box;
+  line-height: 24px;
+  max-height: 48px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+.card-price {
+  color: rgb(51, 51, 51);
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.card-text {
+  font-size: 14px;
+}
+
+/* test detail */
+
+.product-detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: 100vh;
+  width: 60vw;
+  overflow-y: scroll;
+}
+.product-detail.active {
+  visibility: visible;
+}
+.inactive {
+  visibility: hidden;
+}
+.card-img-detail {
+  max-width: 100%;
+  height: 60vh;
+}
+
+.swiper {
+  width: 60vw;
+  max-width: 90%;
+  margin: auto;
+}
+.swiper-slide {
+  object-fit: cover;
+  background-color: rgba(191, 191, 191, 0.111);
+  width: 30vw;
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
+.detail-content {
+  width: 100%;
+}
+.overlay {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.close-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 0 10px;
+  background-color: red;
+  color: white;
+}

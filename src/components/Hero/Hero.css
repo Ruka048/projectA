@@ -1,0 +1,116 @@
+.hero-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 15px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: #fff;
+  font-size: 34px;
+  z-index: 1;
+  text-shadow: -2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.img-container {
+  height: 500px;
+  position: relative;
+}
+
+img.hero-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.95;
+}
+
+:root {
+  --rad: 0.7rem;
+  --dur: 0.3s;
+  --color-dark: #000000;
+  --color-light: #fff;
+  --color-brand: #66ff99;
+  --font-fam: "Poppins", sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+form.search-form {
+  position: relative;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+  transition: 300ms;
+}
+
+input,
+button {
+  outline: 0;
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+}
+
+form.search-form:focus-within {
+  width: 40rem;
+  transition: 300ms;
+  border: solid black;
+}
+
+input[type="search"] {
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+
+button.search-button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: 500;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+  font-size: 200%;
+  color: #000;
+}
+
+button.search-button .arrow-icon {
+  color: white;
+}
+
+#search:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+
+  + button {
+    display: block;
+  }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none !important;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAACp0lEQVR4nO2dOU4DQRBFf2RCI64BBC1Z3BIEiOUubDkJCXAMxBqCClnqwAHLeNxdv9z9n9QZeOrXG8/SM54BhBBCCCGEEEIIIYQYzi6AIwAPAD4AWOPjI2c9BLDDXFE2AJwB+ArQFCONefZTABNG828CNMCCjGtvCecBQluwceK5ze95s2O/jE8A2x4CjgKEtaDjwEPAY4CgFnTcewh4DxDUgo43DwH/FdE6xs5PL4AMPT+9ADL0/PQCyNDz0wsgQ89PL4AMPT+9ADL0/PQCyNDzly5gCuACwB78SACuAGz1LmAK4Db/34uThHnzn/Iy70ZIaEbAdKH55iRhsfk2UkITAn5qvlWW8FPzx0hYewF/Nd8qSfir+ctKWHsBlwM+wwA8A5gVqHeWP2vIMi8d8q/MqgUMWRut0DehxrLWXoCXhFRpGU0IqC0hVfzsZgTUalTtb1dTAko3zGPT1pyAUo3z2rk3KWDVBnoeWTUrYGwjPZvfvIBlT5yel/zbEid2zQvAkmu115rflYCSEkrPK3UjoISEGjOrXQlYRUKtae3uBIyRUPPCjgRAArQJQieboKSdME9A0mEoT0DSiRhPwExTETwBSZNxPAFJ09E8AUkXZHgCki5J8gQkXZTnCUi6LYUnQDdmEQXo1kSyAN2cSxag29MD7AP0A40AR0FT/USJK2COfqQX4Ex4M++YS9w0NZRZXuZ82RGn42MXQIaen14AGXp+egFk6PnpBZCh56cXQIaen14AGXp+egFk6PnpBZCh59eDW/Fr8189BOjRxeA+uvhwwNew17HvIWAnP6qdHdZ6fXw98ms72IEt2DiGI5P82g52aAsyrhjvkZnk13b0vDn6zGu+e/MX2c5vjrjv5BD1PWc98NzmCyGEEEIIIYQQQgisPd+RlYU7q6O+PwAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-size: 30px;
+}

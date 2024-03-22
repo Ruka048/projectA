@@ -1,0 +1,66 @@
+.header-wrapper {
+  background-color: var(--black);
+  color: white;
+}
+.header-container {
+  justify-content: space-between !important;
+  padding-top: 1rem !important;
+  padding-bottom: 0.2rem !important;
+  color: var(--secondary);
+  font-size: 18px;
+  z-index: 1;
+}
+.header-menu {
+  gap: 1.5em;
+}
+.header-menu > li a:hover {
+  color: #66ff99;
+  cursor: pointer;
+}
+.logo-container {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary);
+}
+.logo-container > a span {
+  color: #66ff99;
+}
+.button {
+  background-color: #66ff99;
+  font-size: 18px;
+  color: var(--black);
+  border: none;
+  border-radius: 10px 20px 10px 20px;
+  height: 45px;
+  padding: 10px;
+  transition: 300ms ease-in;
+}
+.button:hover {
+  color: black;
+}
+ul.header-menu li {
+  height: 60px;
+  padding: 20px 20px 0px 0px;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: 300px;
+  padding: 15px;
+  top: 2.9rem;
+  left: 0rem;
+  background: var(--black);
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+}
+.dropdown-content li {
+  padding: 0 !important;
+}
